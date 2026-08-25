@@ -1,0 +1,172 @@
+*{
+margin: 0; /* Remove a margem padrão de todos os elementos */
+padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+box-sizing: border-box; /* Define o modelo de caixa para incluir padding e border na largura e altura dos elementos */
+}
+/* Reseta padrões e ajusta o box-sizing */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+background: linear-gradient(135deg, #121214 0%, #121214 100%);
+min-height: 100vh;
+color: #ffffff;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Container principal para alinhar a barra lateral e o conteúdo */
+.menu-total {
+display: flex;
+min-height: 100vh;
+width: 100%;
+gap: 20px;
+}
+
+/* Barra lateral fixa/alinhada à esquerda */
+.menu-lateral {
+width: 250px;
+background-color: #141416;
+border-right: 1px solid #26262a;
+padding: 20px;
+flex-shrink: 0;
+}
+
+/* Seção principal onde ficam os cards de lanches */
+.menuPrincipal {
+flex: 1;
+padding: 24px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+
+}
+
+/* Container da seção de lanches tradicionais */
+.lanchesTrad {
+padding: 20px;
+display: flex;
+flex-direction: column; /* Empilha o cabeçalho ACIMA da fila */
+gap: 16px; /* Espaço entre o cabeçalho e os cards */
+border-radius: 16px;
+background: rgba(255, 255, 255, 0.05); 
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho da seção */
+.cabecalhoLanchesTrad {
+width: 100%;
+display: flex;
+align-items: center; /* Alinha o ícone verticalmente com o texto */
+gap: 12px;
+}
+
+.cabecalhoLanchesTrad img {
+width: 32px;
+height: 32px;
+object-fit: contain;
+}
+
+/* Fila de cards */
+.filaLanches {
+display: flex;
+flex-wrap: wrap; /* Permite que os cards pulem de linha se faltar espaço */
+gap: 20px;
+}
+.card {
+    flex: none;
+width: 30%;
+display: flex;
+flex-direction: column;
+width: 200px;
+height: 300px;
+border-radius: 16px;
+background: rgba(255, 255, 255, 0.05); 
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+flex: none;
+box-shadow: 0 8px 20px rgba(203, 76, 33, 0.545);
+}
+
+.card img {
+border-radius: 16px;
+object-fit: cover;
+width: 100%;
+height: 60%;
+}
+
+.nomeLanche {
+padding: 8px;
+text-align: center;
+font-size: 26px;
+}
+
+.descricaoLanche {
+font-size: 14.58px;
+text-align: justify;
+padding: 8px;
+color: #ffffff96;
+}
+.topo {
+position: relative;
+width: 100%;
+height: 250px; 
+overflow: hidden;
+}
+
+
+.imagem-topo {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+
+.conteudotopo {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.603); 
+
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+padding-bottom: -30px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding-left: 60px;
+color: white;
+text-align: left;
+}
+
+.h3pizza {
+font-size: 1.2rem;
+font-weight: 300;
+letter-spacing: 2px;
+}
+.h1nomeres {
+font-size: 2.5rem;
+color: #ff3838;
+text-transform: uppercase;
+}
+
+.h4abertura {
+font-size: 0.9rem;
+font-weight: 300;
+margin-top: 5px;
+}
