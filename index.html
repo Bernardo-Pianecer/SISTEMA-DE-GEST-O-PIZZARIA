@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="topo">
-            <img src="imgs/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
+            <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
             <div class="conteudotopo">
                 <h3 class="h3pizza">Pizzaria</h3>
                 <h1 class="h1nomeres">Palladares</h1>
@@ -19,40 +19,111 @@
                 <div class="menu-total">
                     <div class="menu-lateral"></div>
                     <div class="menuPrincipal">
-                    <div class="lanchesTrad">
-                        <div class="cabecalhoLanchesTrad">
-                        <img src="imgs/silhuetaHamburguer.png">
-                        <div class="texto">
-                            <p class="tituloTrad">Lanches Tradicionais</p>
-                            <p class="subTrad">Uma explosão de sabores!</p>
-                        </div>
-                        </div>
-                        <div class="filaLanches">
+            <div class="lanchesTrad">
+                
+                <!-- Cabeçalho da Seção -->
+                <div class="cabecalhoLanchesTrad">
+                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Hambúrguer">
+                    <div class="texto">
+                        <p class="tituloTrad">Lanches Tradicionais</p>
+                        <p class="subTrad">Umaa3ujyni8uyh  explosão de sabores!</p>
+                    </div>
+                </div>
+
+                <!-- Container do Carrossel com Botões -->
+                <div class="carrossel-container">
+                    <!-- Botão Anterior -->
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev')" aria-label="Anterior">&#10094;</button>
+
+                    <!-- Fila com os Cards -->
+                    <div class="filaLanches">
                         <div class="card">
-                            <img src="imgs/x-bacon.png">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Burguer">
+                            <p class="nomeLanche">X-Burguer</p>
+                            <p class="descricaoLanche">Pão, hambúrguer, presunto e queijo.</p>
+                            <p class="preçoHambuguerTrad">R$ 20,00</p>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bacon.png" alt="X Bacon">
                             <p class="nomeLanche">X Bacon</p>
-                            <p class="descricaoLanche">Pão, bacon, hamburguer, queiho alface, tomate, ervilha, milho, batata palha</p>
+                            <p class="descricaoLanche">Pão, bacon e ovo, hambúrguer, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 28,00</p>
                         </div>
+
                         <div class="card">
-                            <img src="imgs/x-salada.png">
+                            <img src="imgs/img_menu/menu_trad/x-salada.png" alt="X Salada">
                             <p class="nomeLanche">X Salada</p>
-                            <p class="descricaoLanche">Pão, hambúrguer, queijo, presunto, alface, tomate, milho, ervilha e batata palha.</p>
+                            <p class="descricaoLanche">Pão, hambúrguer, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 19,00</p>
                         </div>
+
                         <div class="card">
-                            <img src="imgs/Perfect Cheeseburger.png">
-                            <p class="nomeLanche">X Bacon</p>
-                            <p class="descricaoLanche">Pão, bacon, hamburguer, queiho alface, tomate, ervilha, milho, batata palha</p>
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X Bauru">
+                            <p class="nomeLanche">X Bauru</p>
+                            <p class="descricaoLanche">Pão, hambúrguer, presunto, queijo, alface e tomate.</p>
+                            <p class="preçoHambuguerTrad">R$ 21,00</p>
                         </div>
+
                         <div class="card">
-                            <img src="imgs/Perfect Cheeseburger.png">
-                            <p class="nomeLanche">X-Egg</p>
-                            <p class="descricaoLanche">Pão, hambúrguer, queijo, presunto, ovo, alface, tomate, milho, ervilha e batata palha.</p>
-                        </div>
-                        <div class="card">
-                            <img src="imgs/Perfect Cheeseburger.png">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Calabresa">
                             <p class="nomeLanche">X-Calabresa</p>
-                            <p class="descricaoLanche">Pão, hambúrguer, calabresa, queijo, presunto, alface, tomate, milho e batata palha.</p>
+                            <p class="descricaoLanche">Pão, calabresa, hambúrguer, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 28,00</p>
                         </div>
+
+                        <div class="card">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Casa">
+                            <p class="nomeLanche">X-Casa</p>
+                            <p class="descricaoLanche">Pão, hambúrguer, frango, calabresa, bacon e ovo, presunto, queijo, alface, tomate, pepino, milho, ervilha, batata palha e fritas.</p>
+                            <p class="preçoHambuguerTrad">R$ 54,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Coração">
+                            <p class="nomeLanche">X-Coração</p>
+                            <p class="descricaoLanche">Pão, coração, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 29,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Egg">
+                            <p class="nomeLanche">X-Egg</p>
+                            <p class="descricaoLanche">Pão, hambúrguer, ovo, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 28,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Frango">
+                            <p class="nomeLanche">X-Frango</p>
+                            <p class="descricaoLanche">Pão, frango, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 25,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/Perfect Cheeseburger.png" alt="X-Mignon">
+                            <p class="nomeLanche">X-Mignon</p>
+                            <p class="descricaoLanche">Pão, carne, hambúrguer, presunto, queijo, alface, tomate, pepino, milho, ervilha e batata palha.</p>
+                            <p class="preçoHambuguerTrad">R$ 35,00</p>
+                        </div>
+
+                    </div>
+                        <!-- Botão Próximo -->
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next')" aria-label="Próximo">&#10095;</button>
+                    </div>
+                <!-- Script para controle de rolagem das setas -->
+<script>
+    function rolarCarrossel(direcao) {
+        const fila = document.querySelector('.filaLanches');
+        const distancia = 440; // Distância equivalente a ~2 cards por clique
+
+        if (direcao === 'prev') {
+            fila.scrollBy({ left: -distancia, behavior: 'smooth' });
+        } else {
+            fila.scrollBy({ left: distancia, behavior: 'smooth' });
+        }
+    }
+</script>
                         </div>
                     </div>
                     </div>
