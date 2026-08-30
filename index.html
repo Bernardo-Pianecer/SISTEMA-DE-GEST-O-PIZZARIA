@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria do Palladares</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     </head>
     <body>
         <header class="topo">
@@ -112,18 +113,6 @@
                         <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next')" aria-label="Próximo">&#10095;</button>
                     </div>
                 <!-- Script para controle de rolagem das setas -->
-<script>
-    function rolarCarrossel(direcao) {
-        const fila = document.querySelector('.filaLanches');
-        const distancia = 440; // Distância equivalente a ~2 cards por clique
-
-        if (direcao === 'prev') {
-            fila.scrollBy({ left: -distancia, behavior: 'smooth' });
-        } else {
-            fila.scrollBy({ left: distancia, behavior: 'smooth' });
-        }
-    }
-</script>
                         </div>
                     </div>
                     </div>
