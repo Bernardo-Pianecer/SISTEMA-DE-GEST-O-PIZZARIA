@@ -141,7 +141,7 @@ body {
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 15px 5px;
+    padding: 15px 16px;
     width: 100%;
 
     /* Oculta a barra de rolagem visual mantendo a navegação */
@@ -199,11 +199,11 @@ body {
     background: rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(143 14 14 / 62%);
+    box-shadow: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-bottom: 10px;
 }
 
@@ -224,6 +224,8 @@ body {
     text-align: center;
     font-size: 22px;
     font-weight: 600;
+    height: 22%;
+    align-items: center;
 }
 
 .descricaoLanche {
