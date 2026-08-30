@@ -387,7 +387,8 @@ html {
     gap: 16px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 2px 16px;
+    /* Reserva espaço para o card subir 6px no hover sem ser recortado. */
+    padding: 15px 16px;
     width: 100%;
 
     /* Oculta a barra de rolagem visual mantendo a navegação */
@@ -395,7 +396,8 @@ html {
     scrollbar-width: none;
 }
 
-.filaLanches::-webkit-scrollbar {
+.filaLanches::-webkit-scrollbar,
+.filaLanchesDoce::-webkit-scrollbar {
     display: none;
 }
 
