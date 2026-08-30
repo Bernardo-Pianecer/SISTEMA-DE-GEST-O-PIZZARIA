@@ -16,37 +16,49 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Header/Topo */
+/* --- Header /Topo*/
 .topo {
     position: relative;
     width: 100%;
-    height: 275px; 
+    height: 250px; 
     overflow: hidden;
+    background-color: #0b0b0d;
 }
 
 .imagem-topo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.65) contrast(1.1);
-    transform: scale(1.03);
-}
-
-.conteudotopo {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 70%;
     height: 100%;
-    background: linear-gradient(to right, rgba(18, 18, 20, 0.9) 0%, rgba(18, 18, 20, 0.5) 50%, transparent 100%);
+    object-fit: cover;
+    object-position: right center;
+    z-index: 1;
+}
+.logo-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 60px;
-    color: white;
-    text-align: left;
+    gap: 0px;
+    padding: 30px 5px;
+}
+
+.overlay-topo {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #0b0b0d 35%, rgba(11, 11, 13, 0.75) 50%, rgba(11, 11, 13, 0.3) 100%);
+    z-index: 2;
+}
+
+.conteudo-topo {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    height: 100%;
 }
 
 .h3pizza {
@@ -74,6 +86,105 @@ body {
     letter-spacing: 2px;
     color: #ffb838; /* Cor dourada para destacar a tradição */
     margin-top: 6px;
+}
+
+
+/* Área de Infos Direita */
+.info-header-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+/* Card Status (Fechado/Aberto) */
+.card-status-pedido {
+    background: rgba(40, 10, 10, 0.75);
+    border: 1px solid rgba(255, 56, 56, 0.3);
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.icone-status {
+    font-size: 1.2rem;
+}
+
+.texto-status {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-status strong {
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.texto-status small {
+    font-size: 0.7rem;
+    color: #a0a0a0;
+}
+
+/* Linha de Detalhes (Endereço, Tel, Tempo) */
+.bar-info-detalhes {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 16px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icone-info {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.item-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info small {
+    font-size: 0.7rem;
+    color: #cccccc;
+    line-height: 1.2;
+}
+
+.link-menu {
+    color: #a0a0a0;
+    text-decoration: underline;
+}
+
+/* Ajuste Responsivo para Celulares */
+@media (max-width: 900px) {
+    .topo {
+        height: auto;
+    }
+    .conteudo-topo {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .info-header-area {
+        align-items: center;
+        width: 100%;
+    }
+    .bar-info-detalhes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* Layout Principal */
