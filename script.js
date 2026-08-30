@@ -9,3 +9,12 @@ function rolarCarrossel(direcao) {
 
     fila.scrollBy({ left: distancia, behavior: 'smooth' });
 }
+
+const itensMenu = document.querySelectorAll('.item-menu');
+
+itensMenu.forEach((item) => {
+    item.addEventListener('click', () => {
+        itensMenu.forEach((link) => link.classList.remove('ativo'));
+        item.classList.add('ativo');
+    });
+});

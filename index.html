@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <header class="topo">
+        <header class="topo" id="inicio">
             <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
             <div class="conteudotopo">
                 <h3 class="h3pizza">Pizzaria</h3>
@@ -18,9 +18,41 @@
         </header>
             <main>
                 <div class="menu-total">
-                    <div class="menu-lateral"></div>
+                    <aside class="menu-lateral" aria-label="Menu de categorias">
+                        <nav class="navegacao-lateral">
+                            <a class="item-menu ativo" href="#inicio">
+                                <span class="icone-menu" aria-hidden="true">⌂</span>
+                                <span>Início</span>
+                            </a>
+                            <a class="item-menu" href="#lanches">
+                                <span class="icone-menu" aria-hidden="true">☰</span>
+                                <span>Lanches</span>
+                            </a>
+                            <a class="item-menu" href="#porcoes">
+                                <span class="icone-menu" aria-hidden="true">♨</span>
+                                <span>Porções</span>
+                            </a>
+                            <a class="item-menu" href="#pizzas">
+                                <span class="icone-menu" aria-hidden="true">◉</span>
+                                <span>Pizzas</span>
+                            </a>
+                            <a class="item-menu" href="#bebidas">
+                                <span class="icone-menu" aria-hidden="true">♧</span>
+                                <span>Bebidas</span>
+                            </a>
+                            <a class="item-menu" href="#sobremesas">
+                                <span class="icone-menu" aria-hidden="true">♢</span>
+                                <span>Sobremesas</span>
+                            </a>
+                            <a class="item-menu" href="#informacoes">
+                                <span class="icone-menu" aria-hidden="true">ⓘ</span>
+                                <span>Informações</span>
+                            </a>
+                        </nav>
+
+                    </aside>
                     <div class="menuPrincipal">
-            <div class="containerMenuCarrosel"> /*lanches tradicionais */
+            <div class="containerMenuCarrosel" id="lanches"> <!-- Lanches tradicionais -->
                 
                 <!-- Cabeçalho da Seção -->
                 <div class="cabecalhoLanches">
@@ -114,7 +146,7 @@
                     </div>
                 <!-- Script para controle de rolagem das setas -->
             </div>
-            <div class="containerMenuCarrosel"> /*lanches doces*/ 
+            <div class="containerMenuCarrosel"> <!-- Lanches doces -->
                 
                 <!-- Cabeçalho da Seção -->
                 <div class="cabecalhoLanches">
@@ -169,6 +201,7 @@
                     </div>
             </div>
             
+                </div>
                 </div>
             </main>
     </body>
