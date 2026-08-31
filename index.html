@@ -8,14 +8,67 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <header class="topo" id="inicio">
-            <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
-            <div class="conteudotopo">
-                <h3 class="h3pizza">Pizzaria</h3>
-                <h1 class="h1nomeres">Palladares</h1>
-                <h4 class="h4abertura"> * Desde 1998 * </h4>
+<header class="topo" id="inicio">
+    <!-- Imagem de fundo da pizza -->
+    <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
+    
+    <!-- Overlay escuro por cima da imagem -->
+    <div class="overlay-topo"></div>
+
+    <!-- Conteúdo do Topo -->
+    <div class="conteudo-topo">
+        <!-- Lado Esquerdo: Logo da Pizzaria -->
+        <div class="logo-area">
+            <h3 class="h3pizza">PIZZARIA</h3>
+            <h1 class="h1nomeres">Palladares</h1>
+            <span class="h4abertura">✦ DESDE 1998 ✦</span>
+        </div>
+
+        <!-- Lado Direito: Barra de Status e Informações -->
+        <div class="info-header-area">
+            <!-- Card de Status (Fechado/Aberto) -->
+            <div class="card-status-pedido">
+                <span class="icone-status"></span>
+                <div class="texto-status">
+                    <strong>Fechado para pedidos online</strong>
+                    <small>Veja os horários de funcionamento.</small>
+                </div>
             </div>
-        </header>
+
+            <!-- Faixa de Informações Rápidas -->
+            <div class="bar-info-detalhes">
+                <div class="item-info">
+                    <span class="icone-info"></span>
+                    <div>
+                        <small>Av. das Quaresmeiras, 820</small>
+                        <small>Machados, Navegantes - SC</small>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <span class="icone-info"></span>
+                    <div>
+                        <small>(47) 3342-4152</small>
+                        <small>Telefone</small>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <span class="icone-info"></span>
+                    <div>
+                        <small>43 min - 18 min</small>
+                        <small>Tempo de entrega</small>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <span class="icone-info"></span>
+                    <div>
+                        <small>Menu completo</small>
+                        <small class="link-menu">bit.ly/Pedidos_Palladares</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
             <main>
                 <div class="menu-total">
                     <aside class="menu-lateral" aria-label="Menu de categorias">
