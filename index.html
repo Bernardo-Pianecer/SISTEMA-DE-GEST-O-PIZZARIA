@@ -66,7 +66,7 @@
                 <!-- Container do Carrossel com Botões -->
                 <div class="carrossel-container">
                     <!-- Botão Anterior -->
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev')" aria-label="Anterior">&#10094;</button>
+                    <button class="btn-carrossel btn-prev" data-direcao="prev" aria-label="Ver lanches anteriores">&#10094;</button>
 
                     <!-- Fila com os Cards -->
                     <div class="filaLanches">
@@ -142,7 +142,7 @@
 
                     </div>
                         <!-- Botão Próximo -->
-                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next')" aria-label="Próximo">&#10095;</button>
+                        <button class="btn-carrossel btn-next" data-direcao="next" aria-label="Ver próximos lanches">&#10095;</button>
                     </div>
                 <!-- Script para controle de rolagem das setas -->
             </div>
@@ -159,8 +159,10 @@
 
                 <!-- Container do Carrossel com Botões -->
                 <div class="carrossel-container">
+                    <button class="btn-carrossel btn-prev" data-direcao="prev" aria-label="Ver lanches doces anteriores">&#10094;</button>
+
                     <!-- Fila com os Cards -->
-                    <div class="filaLanchesDoce">
+                    <div class="filaLanches">
                         <div class="card">
                             <img src="imgs/img_menu/menu_lancheDoces/x-beijinho.jpeg" alt="X-Burguer">
                             <p class="nomeLanche">X-Beijinho</p>
@@ -195,14 +197,13 @@
                             <p class="descricaoLanche">Pão, Queijo, Chocolate Preto, Chocolate Branco e Creme de Leite.</p>
                             <p class="preçoHambuguer">R$ 22,00</p>
                         </div>
-            </div>
-            
-            
                     </div>
+
+                    <button class="btn-carrossel btn-next" data-direcao="next" aria-label="Ver próximos lanches doces">&#10095;</button>
+                </div>
             </div>
-            
-                </div>
-                </div>
+        </div>
+    </div>
             </main>
     </body>
 </html>

@@ -1,14 +1,16 @@
-function rolarCarrossel(direcao) {
-    const fila = document.querySelector('.filaLanches');
-    const distancia = 440;
+const botoesCarrossel = document.querySelectorAll('.btn-carrossel');
 
-    if (direcao === 'prev') {
-        fila.scrollBy({ left: -distancia, behavior: 'smooth' });
-        return;
-    }
+botoesCarrossel.forEach((botao) => {
+    botao.addEventListener('click', () => {
+        const carrossel = botao.closest('.carrossel-container');
+        const fila = carrossel.querySelector('.filaLanches');
+        const direcao = botao.dataset.direcao;
+        const distancia = 440;
+        const deslocamento = direcao === 'prev' ? -distancia : distancia;
 
-    fila.scrollBy({ left: distancia, behavior: 'smooth' });
-}
+        fila.scrollBy({ left: deslocamento, behavior: 'smooth' });
+    });
+});
 
 const itensMenu = document.querySelectorAll('.item-menu');
 
