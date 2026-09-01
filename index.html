@@ -253,15 +253,251 @@
             
                     </div>
             </div>
-            <div class="containerTiposdePorção"> <!--PORÇÕES-->
-                            <p class="tituloPorções">Tipos de Porções</p>
-                            <div class="divisãoDosTipos">
-                                <div class="carnes">Carnes</div>
-                                <div class="frutosDoMar">|  Frutos do Mar</div>
-                                <div class="fritas">|  Fritas  </div>
-                                <div class="mistas">|  Mistas  </div>
-                            </div>
+            <div class="containerTiposdePorção" id="porcoes"> <!--PORÇÕES-->
+                <p class="tituloPorções">Tipos de Porções</p>
+                <div class="divisãoDosTipos"> <!--Divisão dos tipos e DECISÃO-->
+                    <div class="carnes tipo-porcao" onclick="mostrarPorcao('carnes')">Carnes</div>
+                    <div class="frutosDoMar tipo-porcao" onclick="mostrarPorcao('frutosDoMar')">Frutos do Mar</div>
+                    <div class="fritas tipo-porcao" onclick="mostrarPorcao('fritas')">Fritas</div>
+                    <div class="mistas tipo-porcao" onclick="mostrarPorcao('mistas')">Mistas</div>
+                </div>
+            </div>
+
+            <!-- CARROSSEL DE CARNES -->
+            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-carnes" style="display: none;">
+                <div class="cabecalhoLanches">
+                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Carnes">
+                    <div class="texto">
+                        <p class="tituloLanches">Porções de Carnes</p>
+                        <p class="subLanches">Sabores intensos e saborosos!</p>
+                    </div>
+                </div>
+
+                <div class="carrossel-container">
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'carnes')" aria-label="Anterior">&#10094;</button>
+                    <div class="filaLanches" id="fila-carnes">
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-burguer.jpeg" alt="Calabresa">
+                            <p class="nomeLanche">Calabresa</p>
+                            <p class="descricaoLanche">Calabresa fatiada, alface, tomate, fritas e pão de alho.</p>
+                            <p class="preçoHambuguer">R$ 47,00</p>
                         </div>
+                        
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bacon.jpeg" alt="Coração de Frango">
+                            <p class="nomeLanche">Coração de Frango</p>
+                            <p class="descricaoLanche">Coração, fritas, alface, tomate, cebola e pão de alho.</p>
+                            <p class="preçoHambuguer">R$ 55,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-salada.jpeg" alt="Frango à Passarinho">
+                            <p class="nomeLanche">Frango à Passarinho</p>
+                            <p class="descricaoLanche">Frango à passarinho, salada, farofa e fritas.</p>
+                            <p class="preçoHambuguer">R$ 59,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bauru.jpeg" alt="Frango Picado">
+                            <p class="nomeLanche">Frango Picado</p>
+                            <p class="descricaoLanche">Peito de frango em cubos, fritas, alface, tomate, pepino e pão de alho.</p>
+                            <p class="preçoHambuguer">R$ 49,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-calabresa.jpeg" alt="Porção de Carne">
+                            <p class="nomeLanche">Porção de Carne</p>
+                            <p class="descricaoLanche">Carne de alcatra em cubos, alface, tomate, ovo de codorna, palmito e pão de alho.</p>
+                            <p class="preçoHambuguer">R$ 65,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-casa.jpeg" alt="Bife Acebolado">
+                            <p class="nomeLanche">Bife Acebolado</p>
+                            <p class="descricaoLanche">Arroz, fritas, maionese, farofa, pão com queijo e salada.</p>
+                            <p class="preçoHambuguer">R$ 124,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-coração.jpeg" alt="Bife ao Alho e Óleo">
+                            <p class="nomeLanche">Bife ao Alho e Óleo</p>
+                            <p class="descricaoLanche">Arroz, fritas, maionese, farofa, pão com queijo e salada.</p>
+                            <p class="preçoHambuguer">R$ 124,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-egg.jpeg" alt="Contra Filé">
+                            <p class="nomeLanche">Contra Filé</p>
+                            <p class="descricaoLanche">Arroz, fritas, maionese, farofa, pão com queijo e salada.</p>
+                            <p class="preçoHambuguer">R$ 142,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-frango.jpeg" alt="Chuleta">
+                            <p class="nomeLanche">Chuleta</p>
+                            <p class="descricaoLanche">Arroz, fritas, maionese, farofa, pão com queijo e salada.</p>
+                            <p class="preçoHambuguer">R$ 117,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-mignon.jpeg" alt="Picanha na Chapa">
+                            <p class="nomeLanche">Picanha na Chapa</p>
+                            <p class="descricaoLanche">Arroz, fritas, maionese, farofa, pão com queijo e salada.</p>
+                            <p class="preçoHambuguer">R$ 163,00</p>
+                        </div>
+                    </div>
+                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'carnes')" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- CARROSSEL DE FRUTOS DO MAR -->
+            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-frutosDoMar" style="display: none;">
+                <div class="cabecalhoLanches">
+                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Frutos do Mar">
+                    <div class="texto">
+                        <p class="tituloLanches">Frutos do Mar</p>
+                        <p class="subLanches">Frescor do oceano!</p>
+                    </div>
+                </div>
+
+                <div class="carrossel-container">
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'frutosDoMar')" aria-label="Anterior">&#10094;</button>
+                    <div class="filaLanches" id="fila-frutosDoMar">
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-burguer.jpeg" alt="Camarão Pequeno">
+                            <p class="nomeLanche">Camarão Pequeno à Milanesa</p>
+                            <p class="descricaoLanche">Camarão pequeno empanado e frito, acompanhamentos.</p>
+                            <p class="preçoHambuguer">R$ 97,00</p>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bacon.jpeg" alt="Camarão Médio">
+                            <p class="nomeLanche">Camarão Médio à Milanesa</p>
+                            <p class="descricaoLanche">Camarão médio empanado e frito, acompanhamentos.</p>
+                            <p class="preçoHambuguer">R$ 109,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-salada.jpeg" alt="Lula">
+                            <p class="nomeLanche">Porção de Lula</p>
+                            <p class="descricaoLanche">Lula fresca em anéis, fritas, alface e tomate.</p>
+                            <p class="preçoHambuguer">R$ 98,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bauru.jpeg" alt="Isca de Peixe">
+                            <p class="nomeLanche">Isca de Peixe</p>
+                            <p class="descricaoLanche">Filé de peixe em tiras fritas, alface e tomate.</p>
+                            <p class="preçoHambuguer">R$ 64,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-calabresa.jpeg" alt="Tilápia">
+                            <p class="nomeLanche">Tiras de Tilápia</p>
+                            <p class="descricaoLanche">Tilápia em tiras, salada, arroz e fritas.</p>
+                            <p class="preçoHambuguer">R$ 102,00</p>
+                        </div>
+                    </div>
+                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'frutosDoMar')" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- CARROSSEL DE FRITAS E ACOMPANHAMENTOS -->
+            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-fritas" style="display: none;">
+                <div class="cabecalhoLanches">
+                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Fritas">
+                    <div class="texto">
+                        <p class="tituloLanches">Fritas e Acompanhamentos</p>
+                        <p class="subLanches">Perfeito para compartilhar!</p>
+                    </div>
+                </div>
+
+                <div class="carrossel-container">
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'fritas')" aria-label="Anterior">&#10094;</button>
+                    <div class="filaLanches" id="fila-fritas">
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-burguer.jpeg" alt="Fritas">
+                            <p class="nomeLanche">Fritas</p>
+                            <p class="descricaoLanche">Batata frita crocante e salgada.</p>
+                            <p class="preçoHambuguer">R$ 27,00</p>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bacon.jpeg" alt="Fritas com Queijo e Bacon">
+                            <p class="nomeLanche">Fritas com Queijo e Bacon</p>
+                            <p class="descricaoLanche">Fritas, queijo derretido, bacon e cebolinha.</p>
+                            <p class="preçoHambuguer">R$ 34,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-salada.jpeg" alt="Fritas Premium">
+                            <p class="nomeLanche">Fritas com Cheddar</p>
+                            <p class="descricaoLanche">Fritas, queijo, bacon, cebolinha e cheddar.</p>
+                            <p class="preçoHambuguer">R$ 38,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bauru.jpeg" alt="Fritas com Calabresa">
+                            <p class="nomeLanche">Fritas com Calabresa</p>
+                            <p class="descricaoLanche">Fritas, queijo, bacon, cebolinha e calabresa.</p>
+                            <p class="preçoHambuguer">R$ 39,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-calabresa.jpeg" alt="Polenta">
+                            <p class="nomeLanche">Polenta</p>
+                            <p class="descricaoLanche">Polenta frita e crocante.</p>
+                            <p class="preçoHambuguer">R$ 22,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-casa.jpeg" alt="Polenta Premium">
+                            <p class="nomeLanche">Polenta com Queijo e Bacon</p>
+                            <p class="descricaoLanche">Polenta frita, queijo, bacon e cebolinha.</p>
+                            <p class="preçoHambuguer">R$ 29,00</p>
+                        </div>
+
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-coração.jpeg" alt="Frios">
+                            <p class="nomeLanche">Porção de Frios</p>
+                            <p class="descricaoLanche">Queijo, ovos de codorna, pepino, palmito, azeitonas e salame.</p>
+                            <p class="preçoHambuguer">R$ 44,00</p>
+                        </div>
+                    </div>
+                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'fritas')" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- CARROSSEL DE MISTAS -->
+            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-mistas" style="display: none;">
+                <div class="cabecalhoLanches">
+                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Mistas">
+                    <div class="texto">
+                        <p class="tituloLanches">Porções Mistas</p>
+                        <p class="subLanches">O melhor de tudo junto!</p>
+                    </div>
+                </div>
+
+                <div class="carrossel-container">
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'mistas')" aria-label="Anterior">&#10094;</button>
+                    <div class="filaLanches" id="fila-mistas">
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-burguer.jpeg" alt="Mista Frutos do Mar">
+                            <p class="nomeLanche">Mista - Frutos do Mar</p>
+                            <p class="descricaoLanche">Camarão, lula, ísca de peixe, bolinho de peixe, fritas, arroz, farofa, salada e molho.</p>
+                            <p class="preçoHambuguer">R$ 178,00</p>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="imgs/img_menu/menu_trad/x-bacon.jpeg" alt="Mista Tradicional">
+                            <p class="nomeLanche">Mista - Tradicional</p>
+                            <p class="descricaoLanche">Coração, frango, carne, calabresa, fritas, polenta, alface, tomate, ovo de codorna, pepino, palmito e farofa.</p>
+                            <p class="preçoHambuguer">R$ 146,00</p>
+                        </div>
+                    </div>
+                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'mistas')" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
                 </div>
                 </div>
             </main>
