@@ -379,25 +379,7 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-.filaLanchesDoce {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    /* Reserva espaço para o card subir 6px no hover sem ser recortado. */
-    padding: 15px 16px;
-    width: 100%;
-
-    /* Oculta a barra de rolagem visual mantendo a navegação */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.filaLanches::-webkit-scrollbar,
-.filaLanchesDoce::-webkit-scrollbar {
+.filaLanches::-webkit-scrollbar {
     display: none;
 }
 
@@ -572,6 +554,7 @@ display: flex;
 flex-flow: row wrap;
 gap: 12px;
 }
+<<<<<<< HEAD
 .carnes, .mistas,.frutosDoMar, .fritas{
     width: 200px;
     height: 100%;
@@ -622,3 +605,8 @@ gap: 12px;
 .carrossel-porcoes {
     display: none;
 }
+=======
+.carne frutosDoMar fritas mistas{
+    font-size: 18px;
+}
+>>>>>>> d64f672b62f9b7e69b0eb95c5550bfbc973e1056
