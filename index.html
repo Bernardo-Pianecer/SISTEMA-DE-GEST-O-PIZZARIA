@@ -119,10 +119,10 @@
                 <!-- Container do Carrossel com Botões -->
                 <div class="carrossel-container">
                     <!-- Botão Anterior -->
-                    <button class="btn-carrossel btn-prev" data-direcao="prev" aria-label="Ver lanches anteriores">&#10094;</button>
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lanches')" aria-label="Ver lanches anteriores">&#10094;</button>
 
                     <!-- Fila com os Cards -->
-                    <div class="filaLanches">
+                    <div class="filaLanches" id="fila-lanches">
                         <div class="card">
                             <img src="imgs/img_menu/menu_trad/x-burguer.jpeg" alt="X-Burguer">
                             <p class="nomeLanche">X-Burguer</p>
@@ -195,7 +195,7 @@
 
                     </div>
                         <!-- Botão Próximo -->
-                        <button class="btn-carrossel btn-next" data-direcao="next" aria-label="Ver próximos lanches">&#10095;</button>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'lanches')" aria-label="Ver próximos lanches">&#10095;</button>
                     </div>
                 <!-- Script para controle de rolagem das setas -->
             </div>
@@ -212,10 +212,10 @@
 
                 <!-- Container do Carrossel com Botões -->
                 <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" data-direcao="prev" aria-label="Ver lanches doces anteriores">&#10094;</button>
+                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lancheDoces')" aria-label="Ver lanches anteriores">&#10094;</button>
 
                     <!-- Fila com os Cards -->
-                    <div class="filaLanches">
+                    <div class="filaLanches" id="fila-lancheDoces">
                         <div class="card">
                             <img src="imgs/img_menu/menu_lancheDoces/x-beijinho.jpeg" alt="X-Burguer">
                             <p class="nomeLanche">X-Beijinho</p>
@@ -252,7 +252,7 @@
                         </div>
                     </div>
 
-                    <button class="btn-carrossel btn-next" data-direcao="next" aria-label="Ver próximos lanches doces">&#10095;</button>
+                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'lancheDoces')" aria-label="Ver próximos lanches doces">&#10095;</button>
                     </div>
             </div>
             <div class="containerTiposdePorção" id="porcoes"> <!--PORÇÕES-->
@@ -503,5 +503,28 @@
                 </div>
                 </div>
             </main>
+            <!-- INÍCIO DA PARTE DO CARRINHO: painel flutuante visível durante a navegação. -->
+            <section class="resumo-carrinho recolhido" id="pedido" aria-labelledby="titulo-carrinho">
+                <div class="cabecalho-carrinho">
+                    <div>
+                        <h2 id="titulo-carrinho">Meu pedido</h2>
+                        <p><span id="contadorItens">0</span> <span id="rotuloItens">itens no carrinho</span></p>
+                    </div>
+                    <div class="acoes-carrinho">
+                        <strong class="total-compacto" id="totalCompacto">R$ 0,00</strong>
+                        <button class="btn-alternar-carrinho" id="alternarCarrinho" type="button" aria-label="Expandir carrinho" aria-expanded="false" aria-controls="conteudoCarrinho">+</button>
+                        <button class="btn-limpar" id="limparCarrinho" type="button">Limpar pedido</button>
+                    </div>
+                </div>
+                <div class="corpo-carrinho" id="conteudoCarrinho">
+                    <p class="carrinho-vazio" id="carrinhoVazio">Seu pedido ainda está vazio.</p>
+                    <ul class="itens-carrinho" id="itensCarrinho" aria-live="polite"></ul>
+                    <div class="totais-carrinho">
+                        <div><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+                        <div class="total-pedido"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DA PARTE DO CARRINHO: a estrutura do painel termina aqui. -->
     </body>
 </html>
