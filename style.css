@@ -722,7 +722,7 @@ justify-content:center;
 width: 100%;
 height: 45px;
 display: flex;
-flex-flow: row wrap;
+flex-flow: row nowrap;
 gap: 12px;
 }
 .carnes, .mistas,.frutosDoMar, .fritas{
