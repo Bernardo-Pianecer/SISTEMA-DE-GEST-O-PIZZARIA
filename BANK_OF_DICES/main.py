@@ -1,16 +1,19 @@
 import mysql.connector
+from pathlib import Path
 
 conexao = mysql.connector.connect(
     host="localhost",
     port=3306,
     user="root",
     password="123456",
-    database="escola"
+    database="Palladares"
 )
 
 cursor = conexao.cursor()
 
-with open("database.sql", "r", encoding="utf-8") as arquivo:
+caminho_sql = Path(__file__).parent / "database.sql"
+
+with open(caminho_sql, "r", encoding="utf-8") as arquivo:
     sql = arquivo.read()
 
 for comando in sql.split(";"):

@@ -22,15 +22,15 @@ CREATE TABLE IF NOT EXISTS cliente(
 CREATE TABLE IF NOT EXISTS produto(
     id_prod INT PRIMARY KEY AUTO_INCREMENT,
     descricao_prod VARCHAR(500) NOT NULL,
-    valor_prod
+    valor_prod DECIMAL(10,2)
 );
 
 CREATE TABLE IF NOT EXISTS ingredientes(
     id_ingre INT PRIMARY KEY AUTO_INCREMENT,
     descricao_ingre VARCHAR(500) NOT NULL,
     restricao_ingre VARCHAR(500) NOT NULL,
-    quantidade_ingre INT
-    UNIQUE (telefone_cliente)
+    quantidade_ingre INT,
+    UNIQUE (descricao_cliente)
 );
 
 CREATE TABLE if NOT EXISTS compra(
