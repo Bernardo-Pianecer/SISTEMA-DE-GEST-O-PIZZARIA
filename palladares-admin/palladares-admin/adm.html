@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador | Palladares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="painel-body">
+    <div class="painel-layout">
+        <aside class="painel-sidebar">
+            <div class="marca-painel">
+                <small>PIZZARIA</small>
+                <strong>Palladares</strong>
+                <span>✦ DESDE 1998 ✦</span>
+            </div>
+            <nav>
+                <p class="sidebar-titulo">Menu principal</p>
+                <a class="sidebar-link ativo" href="adm.html">▦ &nbsp; Visão geral</a>
+                <a class="sidebar-link" href="cozinha.html">♨ &nbsp; Cozinha</a>
+                <a class="sidebar-link" href="atendente.html">▤ &nbsp; Atendimento</a>
+                <a class="sidebar-link" href="login.html" onclick="sairDoSistema(); return false;">↪ &nbsp; Sair</a>
+            </nav>
+            <div class="sidebar-rodape">Sistema de gestão • Palladares</div>
+        </aside>
+        <main class="painel-conteudo">
+            <header class="painel-topo">
+                <div>
+                    <h1>Painel administrativo</h1>
+                    <p>Visão geral da operação da Pizzaria Palladares.</p>
+                </div>
+                <div class="usuario-logado" id="nomeUsuario">Administrador</div>
+            </header>
+            <section class="grade-indicadores">
+                <article class="indicador">
+                    <small>Total de pedidos</small>
+                    <strong id="totalPedidos">0</strong>
+                    <span>Pedidos registrados</span>
+                </article>
+                <article class="indicador">
+                    <small>Aguardando</small>
+                    <strong id="pedidosAguardando">0</strong>
+                    <span>Na fila da cozinha</span>
+                </article>
+                <article class="indicador">
+                    <small>Em preparo</small>
+                    <strong id="pedidosPreparo">0</strong>
+                    <span>Em produção</span>
+                </article>
+                <article class="indicador">
+                    <small>Prontos</small>
+                    <strong id="pedidosProntos">0</strong>
+                    <span>Aguardando entrega</span>
+                </article>
+            </section>
+            <section class="painel-card">
+                <div class="card-cabecalho">
+                    <h2>Pedidos recentes</h2>
+                    <span class="texto-secundario">Atualização ao abrir a página</span>
+                </div>
+                <div class="tabela-responsiva">
+                    <table class="tabela-painel">
+                        <thead>
+                            <tr>
+                                <th>Pedido</th>
+                                <th>Cliente</th>
+                                <th>Produto</th>
+                                <th>Qtd.</th>
+                                <th>Status</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaPedidosAdm"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="painel-card">
+                <div class="card-cabecalho">
+                    <h2>Áreas do sistema</h2>
+                </div>
+                <p class="texto-secundario">Acompanhe o trabalho da cozinha e do atendimento. Nesta versão, o painel demonstra o fluxo de pedidos; estoque, financeiro e relatórios ainda não estão implementados.</p>
+                <div class="pedido-acoes">
+                    <a class="botao-painel" href="cozinha.html">Abrir cozinha</a>
+                    <a class="botao-secundario" href="atendente.html">Abrir atendimento</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
