@@ -1,360 +1,304 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria do Palladares</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="banco.js" defer></script>
-    <script src="script.js" defer></script>
-    </head>
-    <body>
-<header class="topo" id="inicio">
-    <!-- Imagem de fundo da pizza -->
-    <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <script src="js/banco.js" defer></script>
+    <script src="js/cardapio.js" defer></script>
+</head>
+<body>
+    <header class="topo" id="inicio">
+        <img src="imgs/img_header/Pizzatopo.png" alt="Pizza de Pepperoni" class="imagem-topo">
+        <div class="overlay-topo"></div>
 
-    <!-- Overlay escuro por cima da imagem -->
-    <div class="overlay-topo"></div>
-
-    <!-- Conteúdo do Topo -->
-    <div class="conteudo-topo">
-        <!-- Lado Esquerdo: Logo da Pizzaria -->
-        <div class="logo-area">
-            <h3 class="h3pizza">PIZZARIA</h3>
-            <h1 class="h1nomeres">Palladares</h1>
-            <span class="h4abertura">✦ DESDE 1998 ✦</span>
-        </div>
-
-        <!-- Lado Direito: Barra de Status e Informações -->
-        <div class="info-header-area">
-            <!-- Card de Status (Fechado/Aberto) -->
-            <div class="card-status-pedido">
-                <span class="icone-status"></span>
-                <div class="texto-status">
-                    <strong>Fechado para pedidos online</strong>
-                    <small>Veja os horários de funcionamento.</small>
-                </div>
+        <div class="conteudo-topo">
+            <div class="logo-area">
+                <h3 class="h3pizza">PIZZARIA</h3>
+                <h1 class="h1nomeres">Palladares</h1>
+                <span class="h4abertura">✦ DESDE 1998 ✦</span>
             </div>
 
-            <!-- Faixa de Informações Rápidas -->
-            <div class="bar-info-detalhes">
-                <div class="item-info">
-                    <span class="icone-info"></span>
-                    <div>
-                        <small>Av. das Quaresmeiras, 820</small>
-                        <small>Machados, Navegantes - SC</small>
+            <div class="info-header-area">
+                <div class="card-status-pedido">
+                    <div class="texto-status">
+                        <strong>Aberto para pedidos</strong>
+                        <small>Monte seu pedido e envie para a cozinha.</small>
                     </div>
                 </div>
-                <div class="item-info">
-                    <span class="icone-info"></span>
-                    <div>
-                        <small>(47) 3342-4152</small>
-                        <small>Telefone</small>
+
+                <div class="bar-info-detalhes">
+                    <div class="item-info">
+                        <div>
+                            <small>Av. das Quaresmeiras, 820</small>
+                            <small>Machados, Navegantes - SC</small>
+                        </div>
                     </div>
-                </div>
-                <div class="item-info">
-                    <span class="icone-info"></span>
-                    <div>
-                        <small>43 min - 18 min</small>
-                        <small>Tempo de entrega</small>
+                    <div class="item-info">
+                        <div>
+                            <small>(47) 3342-4152</small>
+                            <small>Telefone</small>
+                        </div>
                     </div>
-                </div>
-                <div class="item-info">
-                    <span class="icone-info"></span>
-                    <div>
-                        <small>Menu completo</small>
-                        <small class="link-menu">bit.ly/Pedidos_Palladares</small>
+                    <div class="item-info">
+                        <div>
+                            <small>43 min - 18 min</small>
+                            <small>Tempo de entrega</small>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <a class="link-menu" href="login.html">Área do funcionário</a>
+                            <small>Acesso restrito</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-            <main>
-                <div class="menu-total">
-                    <aside class="menu-lateral" aria-label="Menu de categorias">
-                        <nav class="navegacao-lateral">
-                            <a class="item-menu ativo" href="#inicio">
-                                <span class="icone-menu" aria-hidden="true">⌂</span>
-                                <span>Início</span>
-                            </a>
-                            <a class="item-menu" href="#lanches">
-                                <span class="icone-menu" aria-hidden="true">☰</span>
-                                <span>Lanches</span>
-                            </a>
-                            <a class="item-menu" href="#porcoes">
-                                <span class="icone-menu" aria-hidden="true">♨</span>
-                                <span>Porções</span>
-                            </a>
-                            <a class="item-menu" href="#pizzas">
-                                <span class="icone-menu" aria-hidden="true">◉</span>
-                                <span>Pizzas</span>
-                            </a>
-                            <a class="item-menu" href="#bebidas">
-                                <span class="icone-menu" aria-hidden="true">♧</span>
-                                <span>Bebidas</span>
-                            </a>
-                            <a class="item-menu" href="#bebidas-alcoolicas">
-                                <span class="icone-menu" aria-hidden="true">♧</span>
-                                <span>Bebidas alcoólicas</span>
-                            </a>
-                            <a class="item-menu" href="#sobremesas">
-                                <span class="icone-menu" aria-hidden="true">♢</span>
-                                <span>Sobremesas</span>
-                            </a>
-                            <a class="item-menu" href="#informacoes">
-                                <span class="icone-menu" aria-hidden="true">ⓘ</span>
-                                <span>Suporte</span>
-                            </a>
-                        </nav>
+    </header>
 
-                    </aside>
-                    <div class="menuPrincipal">
-            <div class="containerMenuCarrosel" id="lanches"> <!-- Lanches tradicionais -->
-                
-                <!-- Cabeçalho da Seção -->
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Hambúrguer">
-                    <div class="texto">
-                        <p class="tituloLanches">Lanches Tradicionais</p>
-                        <p class="subLanches">Uma explosão de sabores!</p>
+    <main>
+        <div class="menu-total">
+            <aside class="menu-lateral" aria-label="Menu de categorias">
+                <nav class="navegacao-lateral">
+                    <a class="item-menu ativo" href="#inicio"><span class="icone-menu" aria-hidden="true">⌂</span><span>Início</span></a>
+                    <a class="item-menu" href="#lanches"><span class="icone-menu" aria-hidden="true">☰</span><span>Lanches</span></a>
+                    <a class="item-menu" href="#porcoes"><span class="icone-menu" aria-hidden="true">♨</span><span>Porções</span></a>
+                    <a class="item-menu" href="#pizzas"><span class="icone-menu" aria-hidden="true">◉</span><span>Pizzas</span></a>
+                    <a class="item-menu" href="#bebidas"><span class="icone-menu" aria-hidden="true">♧</span><span>Bebidas</span></a>
+                    <a class="item-menu" href="#bebidas-alcoolicas"><span class="icone-menu" aria-hidden="true">♧</span><span>Bebidas alcoólicas</span></a>
+                    <a class="item-menu" href="#sobremesas"><span class="icone-menu" aria-hidden="true">♢</span><span>Sobremesas</span></a>
+                    <a class="item-menu" href="#informacoes"><span class="icone-menu" aria-hidden="true">ⓘ</span><span>Suporte</span></a>
+                </nav>
+            </aside>
+
+            <div class="menuPrincipal">
+                <div class="containerMenuCarrosel" id="lanches">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Hambúrguer">
+                        <div class="texto">
+                            <p class="tituloLanches">Lanches Tradicionais</p>
+                            <p class="subLanches">Uma explosão de sabores!</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Container do Carrossel com Botões -->
-                <div class="carrossel-container">
-                    <!-- Botão Anterior -->
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lanches')" aria-label="Ver lanches anteriores">&#10094;</button>
-
-                    <!-- Fila com os Cards -->
-                    <div class="filaLanches" id="fila-lanches">
-                    </div>
-                        <!-- Botão Próximo -->
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lanches')" aria-label="Ver lanches anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-lanches"></div>
                         <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'lanches')" aria-label="Ver próximos lanches">&#10095;</button>
                     </div>
-                <!-- Script para controle de rolagem das setas -->
+                </div>
+
+                <div class="containerMenuCarrosel">
+                    <div class="cabecalhoLanches">
+                        <img class="boloIcon" src="imgs/icons/silhuetaBolo.png" alt="Ícone Bolo">
+                        <div class="texto">
+                            <p class="tituloLanches">Lanches Doces</p>
+                            <p class="subLanches">Uma explosão de sabores!</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lancheDoces')" aria-label="Ver lanches anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-lancheDoces"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'lancheDoces')" aria-label="Ver próximos lanches doces">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerTiposdePorção" id="porcoes">
+                    <p class="tituloPorções">Tipos de Porções</p>
+                    <div class="divisãoDosTipos">
+                        <div class="carnes tipo-porcao" onclick="mostrarPorcao('carnes')">Carnes</div>
+                        <div class="frutosDoMar tipo-porcao" onclick="mostrarPorcao('frutosDoMar')">Frutos do Mar</div>
+                        <div class="fritas tipo-porcao" onclick="mostrarPorcao('fritas')">Fritas</div>
+                        <div class="mistas tipo-porcao" onclick="mostrarPorcao('mistas')">Mistas</div>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-carnes" style="display: none;">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Carnes">
+                        <div class="texto">
+                            <p class="tituloLanches">Carnes</p>
+                            <p class="subLanches">Para quem gosta de fartura!</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'carnes')" aria-label="Anterior">&#10094;</button>
+                        <div class="filaLanches" id="fila-carnes"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'carnes')" aria-label="Próximo">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-frutosDoMar" style="display: none;">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Frutos do Mar">
+                        <div class="texto">
+                            <p class="tituloLanches">Frutos do Mar</p>
+                            <p class="subLanches">Frescor do oceano!</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'frutosDoMar')" aria-label="Anterior">&#10094;</button>
+                        <div class="filaLanches" id="fila-frutosDoMar"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'frutosDoMar')" aria-label="Próximo">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-fritas" style="display: none;">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Fritas">
+                        <div class="texto">
+                            <p class="tituloLanches">Fritas</p>
+                            <p class="subLanches">Crocantes e irresistíveis!</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'fritas')" aria-label="Anterior">&#10094;</button>
+                        <div class="filaLanches" id="fila-fritas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'fritas')" aria-label="Próximo">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-mistas" style="display: none;">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Mistas">
+                        <div class="texto">
+                            <p class="tituloLanches">Porções Mistas</p>
+                            <p class="subLanches">O melhor de tudo junto!</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'mistas')" aria-label="Anterior">&#10094;</button>
+                        <div class="filaLanches" id="fila-mistas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'mistas')" aria-label="Próximo">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel" id="pizzas">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de pizza">
+                        <div class="texto">
+                            <p class="tituloLanches">Pizzas Tradicionais e Doces</p>
+                            <p class="subLanches">Em todas há orégano e azeitonas.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'pizzas')" aria-label="Ver pizzas anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-pizzas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'pizzas')" aria-label="Ver próximas pizzas">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel" id="pizzas-especiais">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de pizza especial">
+                        <div class="texto">
+                            <p class="tituloLanches">Pizzas Especiais, Tradicionais e Doces</p>
+                            <p class="subLanches">Em todas há orégano e azeitonas.</p>
+                        </div>
+                    </div>
+                    <p class="descricaoLanche">É obrigatório escolher pelo menos 1 sabor especial.</p>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'pizzasEspeciais')" aria-label="Ver pizzas especiais anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-pizzasEspeciais"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'pizzasEspeciais')" aria-label="Ver próximas pizzas especiais">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel" id="bebidas">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de bebidas">
+                        <div class="texto">
+                            <p class="tituloLanches">Bebidas sem álcool</p>
+                            <p class="subLanches">Refrigerantes, sucos e outras bebidas.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'bebidas')" aria-label="Ver bebidas anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-bebidas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'bebidas')" aria-label="Ver próximas bebidas">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel" id="bebidas-alcoolicas">
+                    <div class="cabecalhoLanches">
+                        <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de bebidas alcoólicas">
+                        <div class="texto">
+                            <p class="tituloLanches">Bebidas Alcoólicas</p>
+                            <p class="subLanches">Cervejas, caipirinhas e vinho.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'bebidasAlcoolicas')" aria-label="Ver bebidas anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-bebidasAlcoolicas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'bebidasAlcoolicas')" aria-label="Ver próximas bebidas">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="containerMenuCarrosel" id="sobremesas">
+                    <div class="cabecalhoLanches">
+                        <img class="boloIcon" src="imgs/icons/silhuetaBolo.png" alt="Ícone de sobremesas">
+                        <div class="texto">
+                            <p class="tituloLanches">Sobremesas</p>
+                            <p class="subLanches">Açaí na taça.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-container">
+                        <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'sobremesas')" aria-label="Ver sobremesas anteriores">&#10094;</button>
+                        <div class="filaLanches" id="fila-sobremesas"></div>
+                        <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'sobremesas')" aria-label="Ver próximas sobremesas">&#10095;</button>
+                    </div>
+                </div>
+
+                <footer class="containerMenuCarrosel" id="informacoes">
+                    <p class="tituloLanches">Suporte</p>
+                    <p class="descricaoLanche">FAÇA SEU APP VOCÊ TAMBÉM! (47) 9 9213-6417</p>
+                </footer>
             </div>
-            <div class="containerMenuCarrosel"> <!-- Lanches doces -->
-                
-                <!-- Cabeçalho da Seção -->
-                <div class="cabecalhoLanches">
-                    <img class="boloIcon"src="imgs/icons/silhuetaBolo.png" alt="Ícone Hambúrguer">
-                    <div class="texto">
-                        <p class="tituloLanches">Lanches Doces</p>
-                        <p class="subLanches">Uma explosão de sabores!</p>
-                    </div>
-                </div>
+        </div>
+    </main>
 
-                <!-- Container do Carrossel com Botões -->
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'lancheDoces')" aria-label="Ver lanches anteriores">&#10094;</button>
-
-                    <!-- Fila com os Cards -->
-                    <div class="filaLanches" id="fila-lancheDoces">
-                    </div>
-
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'lancheDoces')" aria-label="Ver próximos lanches doces">&#10095;</button>
-                    </div>
+    <section class="resumo-carrinho recolhido" id="pedido" aria-labelledby="titulo-carrinho">
+        <div class="cabecalho-carrinho">
+            <div>
+                <h2 id="titulo-carrinho">Meu pedido</h2>
+                <p><span id="contadorItens">0</span> <span id="rotuloItens">itens no carrinho</span></p>
             </div>
-            <div class="containerTiposdePorção" id="porcoes"> <!--PORÇÕES-->
-                <p class="tituloPorções">Tipos de Porções</p>
-                <div class="divisãoDosTipos"> <!--Divisão dos tipos e DECISÃO-->
-                    <div class="carnes tipo-porcao" onclick="mostrarPorcao('carnes')">Carnes</div>
-                    <div class="frutosDoMar tipo-porcao" onclick="mostrarPorcao('frutosDoMar')">Frutos do Mar</div>
-                    <div class="fritas tipo-porcao" onclick="mostrarPorcao('fritas')">Fritas</div>
-                    <div class="mistas tipo-porcao" onclick="mostrarPorcao('mistas')">Mistas</div>
-                </div>
+            <div class="acoes-carrinho">
+                <strong class="total-compacto" id="totalCompacto">R$ 0,00</strong>
+                <button class="btn-alternar-carrinho" id="alternarCarrinho" type="button" aria-label="Expandir carrinho" aria-expanded="false">+</button>
+                <button class="btn-limpar" id="limparCarrinho" type="button">Limpar</button>
+            </div>
+        </div>
+
+        <div class="corpo-carrinho" id="conteudoCarrinho">
+            <p class="carrinho-vazio" id="carrinhoVazio">Seu pedido ainda está vazio.</p>
+            <ul class="itens-carrinho" id="itensCarrinho" aria-live="polite"></ul>
+
+            <div class="totais-carrinho">
+                <div><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+                <div class="total-pedido"><span>Total</span><strong id="total">R$ 0,00</strong></div>
             </div>
 
-            <!-- CARROSSEL DE CARNES -->
-            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-carnes" style="display: none;">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Carnes">
-                    <div class="texto">
-                        <p class="tituloLanches">Porções de Carnes</p>
-                        <p class="subLanches">Sabores intensos e saborosos!</p>
-                    </div>
-                </div>
+            <button class="botao-finalizar" id="finalizarPedido" type="button" disabled>Finalizar pedido</button>
 
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'carnes')" aria-label="Anterior">&#10094;</button>
-                    <div class="filaLanches" id="fila-carnes">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'carnes')" aria-label="Próximo">&#10095;</button>
+            <form id="formFinalizar" class="form-finalizar" hidden>
+                <div class="campo-carrinho">
+                    <label for="clienteFinalizar">Seu nome</label>
+                    <input id="clienteFinalizar" type="text" placeholder="Ex.: Maria" required>
                 </div>
-            </div>
+                <div class="campo-carrinho">
+                    <label for="mesaFinalizar">Mesa ou retirada</label>
+                    <input id="mesaFinalizar" type="text" placeholder="Ex.: Mesa 03 ou Retirada" required>
+                </div>
+                <button class="botao-finalizar" type="submit">Enviar para a cozinha</button>
+            </form>
 
-            <!-- CARROSSEL DE FRUTOS DO MAR -->
-            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-frutosDoMar" style="display: none;">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Frutos do Mar">
-                    <div class="texto">
-                        <p class="tituloLanches">Frutos do Mar</p>
-                        <p class="subLanches">Frescor do oceano!</p>
-                    </div>
-                </div>
-
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'frutosDoMar')" aria-label="Anterior">&#10094;</button>
-                    <div class="filaLanches" id="fila-frutosDoMar">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'frutosDoMar')" aria-label="Próximo">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- CARROSSEL DE FRITAS E ACOMPANHAMENTOS -->
-            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-fritas" style="display: none;">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Fritas">
-                    <div class="texto">
-                        <p class="tituloLanches">Fritas e Acompanhamentos</p>
-                        <p class="subLanches">Perfeito para compartilhar!</p>
-                    </div>
-                </div>
-
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'fritas')" aria-label="Anterior">&#10094;</button>
-                    <div class="filaLanches" id="fila-fritas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'fritas')" aria-label="Próximo">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- CARROSSEL DE MISTAS -->
-            <div class="containerMenuCarrosel carrossel-porcoes" id="carrossel-mistas" style="display: none;">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone Mistas">
-                    <div class="texto">
-                        <p class="tituloLanches">Porções Mistas</p>
-                        <p class="subLanches">O melhor de tudo junto!</p>
-                    </div>
-                </div>
-
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'mistas')" aria-label="Anterior">&#10094;</button>
-                    <div class="filaLanches" id="fila-mistas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'mistas')" aria-label="Próximo">&#10095;</button>
-                </div>
-            </div>
-            
-            <!-- PIZZAS TRADICIONAIS -->
-            <div class="containerMenuCarrosel" id="pizzas">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de pizza">
-                    <div class="texto">
-                        <p class="tituloLanches">Pizzas Tradicionais e Doces</p>
-                        <p class="subLanches">Em todas há orégano e azeitonas.</p>
-                    </div>
-                </div>
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'pizzas')" aria-label="Ver pizzas anteriores">&#10094;</button>
-                    <div class="filaLanches" id="fila-pizzas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'pizzas')" aria-label="Ver próximas pizzas">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- PIZZAS ESPECIAIS -->
-            <div class="containerMenuCarrosel" id="pizzas-especiais">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de pizza especial">
-                    <div class="texto">
-                        <p class="tituloLanches">Pizzas Especiais, Tradicionais e Doces</p>
-                        <p class="subLanches">Em todas há orégano e azeitonas.</p>
-                    </div>
-                </div>
-                <p class="descricaoLanche">É obrigatório escolher pelo menos 1 sabor especial.</p>
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'pizzasEspeciais')" aria-label="Ver pizzas especiais anteriores">&#10094;</button>
-                    <div class="filaLanches" id="fila-pizzasEspeciais">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'pizzasEspeciais')" aria-label="Ver próximas pizzas especiais">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- BEBIDAS SEM ÁLCOOL -->
-            <div class="containerMenuCarrosel" id="bebidas">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de bebidas">
-                    <div class="texto">
-                        <p class="tituloLanches">Bebidas sem álcool</p>
-                        <p class="subLanches">Refrigerantes, sucos e outras bebidas.</p>
-                    </div>
-                </div>
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'bebidas')" aria-label="Ver bebidas anteriores">&#10094;</button>
-                    <div class="filaLanches" id="fila-bebidas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'bebidas')" aria-label="Ver próximas bebidas">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- BEBIDAS ALCOÓLICAS -->
-            <div class="containerMenuCarrosel" id="bebidas-alcoolicas">
-                <div class="cabecalhoLanches">
-                    <img src="imgs/icons/silhuetaHamburguer.png" alt="Ícone de bebidas alcoólicas">
-                    <div class="texto">
-                        <p class="tituloLanches">Bebidas Alcoólicas</p>
-                        <p class="subLanches">Cervejas, caipirinhas e vinho.</p>
-                    </div>
-                </div>
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'bebidasAlcoolicas')" aria-label="Ver bebidas anteriores">&#10094;</button>
-                    <div class="filaLanches" id="fila-bebidasAlcoolicas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'bebidasAlcoolicas')" aria-label="Ver próximas bebidas">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- SOBREMESAS -->
-            <div class="containerMenuCarrosel" id="sobremesas">
-                <div class="cabecalhoLanches">
-                    <img class="boloIcon" src="imgs/icons/silhuetaBolo.png" alt="Ícone de sobremesas">
-                    <div class="texto">
-                        <p class="tituloLanches">Sobremesas</p>
-                        <p class="subLanches">Açaí na taça.</p>
-                    </div>
-                </div>
-                <div class="carrossel-container">
-                    <button class="btn-carrossel btn-prev" onclick="rolarCarrossel('prev', 'sobremesas')" aria-label="Ver sobremesas anteriores">&#10094;</button>
-                    <div class="filaLanches" id="fila-sobremesas">
-                    </div>
-                    <button class="btn-carrossel btn-next" onclick="rolarCarrossel('next', 'sobremesas')" aria-label="Ver próximas sobremesas">&#10095;</button>
-                </div>
-            </div>
-
-            <footer class="containerMenuCarrosel" id="informacoes">
-                <p class="tituloLanches">Suporte</p>
-                <p class="descricaoLanche">FAÇA SEU APP VOCÊ TAMBÉM! (47) 9 9213-6417</p>
-            </footer>
-
-                </div>
-                </div>
-                
-            </main>
-            <!-- INÍCIO DA PARTE DO CARRINHO: painel flutuante visível durante a navegação. -->
-            <section class="resumo-carrinho recolhido" id="pedido" aria-labelledby="titulo-carrinho">
-                <div class="cabecalho-carrinho">
-                    <div>
-                        <h2 id="titulo-carrinho">Meu pedido</h2>
-                        <p><span id="contadorItens">0</span> <span id="rotuloItens">itens no carrinho</span></p>
-                    </div>
-                    <div class="acoes-carrinho">
-                        <strong class="total-compacto" id="totalCompacto">R$ 0,00</strong>
-                        <button class="btn-alternar-carrinho" id="alternarCarrinho" type="button" aria-label="Expandir carrinho" aria-expanded="false" aria-controls="conteudoCarrinho">+</button>
-                        <button class="btn-limpar" id="limparCarrinho" type="button">Limpar pedido</button>
-                    </div>
-                </div>
-                <div class="corpo-carrinho" id="conteudoCarrinho">
-                    <p class="carrinho-vazio" id="carrinhoVazio">Seu pedido ainda está vazio.</p>
-                    <ul class="itens-carrinho" id="itensCarrinho" aria-live="polite"></ul>
-                    <div class="totais-carrinho">
-                        <div><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
-                        <div class="total-pedido"><span>Total</span><strong id="total">R$ 0,00</strong></div>
-                    </div>
-                </div>
-            </section>
-            <!-- FIM DA PARTE DO CARRINHO: a estrutura do painel termina aqui. -->
-    </body>
+            <p class="mensagem-login" id="mensagemFinalizar" hidden></p>
+        </div>
+    </section>
+</body>
 </html>
