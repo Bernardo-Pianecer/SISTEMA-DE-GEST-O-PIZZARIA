@@ -62,8 +62,8 @@ function protegerPagina(perfilPermitido) {
         return null;
     }
 
-    // Perfil errado: manda para a página correta do próprio perfil.
-    if (usuario.perfil !== perfilPermitido) {
+    // O administrador pode abrir qualquer painel; os demais ficam no próprio.
+    if (usuario.perfil !== perfilPermitido && usuario.perfil !== "Administrador") {
         window.location.href = paginaDoPerfil(usuario.perfil);
         return null;
     }
@@ -162,3 +162,5 @@ function mostrarMensagem(elemento, texto, tipo) {
     elemento.className = "mensagem-login " + tipo;
     elemento.hidden = false;
 }
+
+document.addEventListener("DOMContentLoaded", iniciarLogin);
