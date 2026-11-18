@@ -258,18 +258,12 @@ function limparCarrinho() {
 // Os dados ficam no navegador usando localStorage.
 // =====================================================
 
-const pedidosIniciais = [
-    { id: 1001, cliente: 'Mariana', produto: 'Pizza Calabresa', quantidade: 1, mesa: 'Mesa 02', status: 'Em preparo', horario: '19:35' },
-    { id: 1002, cliente: 'João', produto: 'X-Bacon', quantidade: 2, mesa: 'Retirada', status: 'Aguardando', horario: '19:42' },
-    { id: 1003, cliente: 'Camila', produto: 'Pizza Marguerita', quantidade: 1, mesa: 'Mesa 05', status: 'Pronto', horario: '19:28' }
-];
-
 // Verifica se existe uma lista salva. Se não existir, cria alguns pedidos de exemplo.
 function buscarPedidos() {
     const dadosSalvos = localStorage.getItem('palladares_pedidos');
     if (dadosSalvos) return JSON.parse(dadosSalvos);
-    localStorage.setItem('palladares_pedidos', JSON.stringify(pedidosIniciais));
-    return pedidosIniciais;
+    localStorage.setItem('palladares_pedidos', JSON.stringify(banco.pedidosIniciais));
+    return banco.pedidosIniciais;
 }
 
 function salvarPedidos(pedidos) {

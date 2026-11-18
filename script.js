@@ -5,6 +5,27 @@ const itensMenu = document.querySelectorAll('.item-menu');
 const carrinho = [];
 // ===== FIM: DADOS DO CARRINHO =====
 
+function carregarCardapio() {
+    Object.keys(banco).forEach((categoria) => {
+        const fila = document.getElementById(`fila-${categoria}`);
+
+        banco[categoria].forEach((produto) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${produto.imagem}" alt="${produto.alt}">
+                <p class="nomeLanche">${produto.nome}</p>
+                <p class="descricaoLanche">${produto.descricao}</p>
+                <p class="preçoHambuguer">${produto.preco}</p>
+            `;
+
+            fila.appendChild(card);
+        });
+    });
+}
+
+carregarCardapio();
+
 itensMenu.forEach((item) => {
     item.addEventListener('click', () => {
         itensMenu.forEach((link) => link.classList.remove('ativo'));
