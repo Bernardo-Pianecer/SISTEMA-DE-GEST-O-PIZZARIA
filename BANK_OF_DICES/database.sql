@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS ingredientes(
     descricao_ingre VARCHAR(500) NOT NULL,
     restricao_ingre VARCHAR(500) NOT NULL,
     quantidade_ingre INT,
-    UNIQUE (descricao_cliente)
+    UNIQUE (descricao_ingre)
 );
 
 CREATE TABLE if NOT EXISTS compra(
