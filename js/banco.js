@@ -135,3 +135,31 @@ const banco = {
         { nome: "cozinha", senha: "1234", perfil: "Cozinheiro" }
     ]
 };
+
+// Busca os pedidos já salvos. Se ainda não houver nenhum, usa os exemplos para a tela não começar vazia.
+function buscarPedidos() {
+    const dadosSalvos = localStorage.getItem("palladares_pedidos");
+
+    if (dadosSalvos) {
+        return JSON.parse(dadosSalvos);
+    }
+
+    localStorage.setItem("palladares_pedidos", JSON.stringify(banco.pedidosIniciais));
+    return banco.pedidosIniciais;
+}
+
+// Guarda a lista atual para que as outras telas encontrem os mesmos pedidos.
+function salvarPedidos(pedidos) {
+    localStorage.setItem("palladares_pedidos", JSON.stringify(pedidos));
+}
+
+// Usa o maior número já existente e soma um, para cada pedido ganhar seu próprio número.
+function proximoId(pedidos) {
+    let maior = 1000;
+
+    for (let i = 0; i < pedidos.length; i++) {
+        if (pedidos[i].id > maior) maior = pedidos[i].id;
+    }
+
+    return maior + 1;
+}
