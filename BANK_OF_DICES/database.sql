@@ -10,23 +10,20 @@ USE Palladares;
 CREATE TABLE funcionario (
     id_func       INT PRIMARY KEY AUTO_INCREMENT,
     nome_func     VARCHAR(100) NOT NULL,
-    telefone_func VARCHAR(20)  NOT NULL,
+    telefone_func VARCHAR(20)  NOT NULL UNIQUE,
     endereco_func VARCHAR(200),
     cargo_func    VARCHAR(30)  NOT NULL, # Melhor seria usar "INT"
-    login_func    VARCHAR(50)  NOT NULL,
+    login_func    VARCHAR(50)  NOT NULL UNIQUE,
     senha_func    VARCHAR(255) NOT NULL,
-    status_func   BOOLEAN NOT NULL DEFAULT TRUE,
-    UNIQUE (telefone_func),
-    UNIQUE (login_func)
+    status_func   BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 -- clientes, endereco pode ficar vazio se for retirada
 CREATE TABLE cliente (
     id_cliente       INT PRIMARY KEY AUTO_INCREMENT,
     nome_cliente     VARCHAR(100) NOT NULL,
-    telefone_cliente VARCHAR(20)  NOT NULL,
-    endereco_cliente VARCHAR(200),
-    UNIQUE (telefone_cliente)
+    telefone_cliente VARCHAR(20)  NOT NULL UNIQUE,
+    endereco_cliente VARCHAR(200)
 );
 
 -- cardapio
