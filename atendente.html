@@ -24,7 +24,106 @@
                 <p class="sidebar-titulo">Menu principal</p>
                 <a class="sidebar-link ativo" href="atendente.html">▤ &nbsp; Atendimento</a>
                 <a class="sidebar-link" href="index.html">☰ &nbsp; Cardápio</a>
+                <a class="<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento | Palladares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/painel.css">
+    <script src="js/banco.js" defer></script>
+    <script src="js/acesso.js" defer></script>
+    <script src="js/painel.js" defer></script>
+</head>
+<body class="painel-body" data-pagina="atendente">
+
+    <div class="painel-layout">
+        <aside class="painel-sidebar">
+            <div class="marca-painel">
+                <small>PIZZARIA</small>
+                <strong>Palladares</strong>
+                <span>✦ DESDE 1998 ✦</span>
+            </div>
+            <nav>
+                <p class="sidebar-titulo">Menu principal</p>
+                <a class="sidebar-link ativo" href="atendente.html">▤ &nbsp; Atendimento</a>
+                <a class="sidebar-link" href="index.html">☰ &nbsp; Cardápio</a>
                 <a class="sidebar-link" href="login.html" onclick="sairDoSistema(); return false;">↪ &nbsp; Sair</a>
+            </nav>
+            <div class="sidebar-rodape">Sistema de gestão • Palladares</div>
+        </aside>
+
+        <main class="painel-conteudo">
+            <header class="painel-topo">
+                <div>
+                    <h1>Painel de atendimento</h1>
+                    <p>Registre novos pedidos e acompanhe as entregas.</p>
+                </div>
+                <div class="usuario-logado" id="nomeUsuario">—</div>
+            </header>
+
+            <section class="painel-card">
+                <div class="card-cabecalho">
+                    <h2>Novo pedido</h2>
+                    <span class="texto-secundario">Escolha os produtos no cardápio e envie para a cozinha</span>
+                </div>
+                <a class="botao-painel" href="index.html?origem=atendente#lanches">+ Anotar pedido no cardápio</a>
+            </section>
+
+            <section class="painel-card">
+                <div class="card-cabecalho">
+                    <h2>Acompanhamento dos pedidos</h2>
+                </div>
+                <div class="tabela-responsiva">
+                    <table class="tabela-painel">
+                        <thead>
+                            <tr>
+                                <th>Pedido</th>
+                                <th>Cliente</th>
+                                <th>Produto</th>
+                                <th>Destino</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pedidosAtendente"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import {
+    getFirestore, collection, addDoc, onSnapshot,
+    doc, updateDoc, deleteDoc, query, orderBy, serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCVPhX343KNSZgi4fp_WlBsBLohFowWXRQ",
+    authDomain: "pizzaria-web-5541b.firebaseapp.com",
+    projectId: "pizzaria-web-5541b",
+    storageBucket: "pizzaria-web-5541b.firebasestorage.app",
+    messagingSenderId: "981557780197",
+    appId: "1:981557780197:web:d883c790d9f2d994f6fe0c"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.fb = {
+    collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc,
+    query, orderBy, serverTimestamp
+  };
+
+  console.log("Firebase conectado:", firebaseConfig.projectId);
+</script>
+</body>
+</html>sidebar-link" href="login.html" onclick="sairDoSistema(); return false;">↪ &nbsp; Sair</a>
             </nav>
             <div class="sidebar-rodape">Sistema de gestão • Palladares</div>
         </aside>
